@@ -1,0 +1,36 @@
+---
+title: "Week 3 Assignment"
+author: "Kishor Nadekar"
+date: "January 18, 2021"
+output: ioslides_presentation
+---
+
+## Box Plot 
+
+```{r, eval=TRUE,echo=FALSE, message=FALSE}
+library(plotly)
+library(ggplot2)
+f1 <- plot_ly(chickwts, x=~weight, color = ~feed, type="box")
+f1 <- f1 %>% layout(title = 'Different feed types and chicken weights',
+                      yaxis = list (title = 'Feed type'))
+f1
+
+```
+
+## Scatter Plot 
+
+```{r, eval=TRUE,echo=FALSE, message=FALSE}
+f2 <- plot_ly( cars,  x = ~speed, y = ~dist ,  type = "scatter")
+f2 <- f2 %>% layout (title = 'Speed of cars adn distance taken to stop',
+                     xaxis = list(title = 'Speed (mph)'),
+                     yaxis = list(title = 'Distance (ft)'))
+f2
+
+```
+
+## Thanks
+
+
+
+
+
